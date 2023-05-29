@@ -1,0 +1,12 @@
+.sw_producer {
+    text-align: center;
+    padding-top: 30px;
+    margin-left: 70px;
+    color: #a7a7a7;
+    font-size: 13px;
+}
+
+.sw_producer a {
+    color: #a7a7a7;
+    text-decoration : none;
+}
