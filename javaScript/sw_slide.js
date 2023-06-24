@@ -81,7 +81,7 @@ function nextMove() {
       // 각 슬라이드 아이템의 left에 offset 적용
       slideItems.forEach((i) => {
         i.setAttribute("style", `transition: ${0}s; left: ${-offset}px`);
-        i.setAttribute("style", `transition: ${0.7}s; left: ${-offset}px`);
+        i.setAttribute("style", `transition: ${0.15}s; left: ${-offset}px`);
       });
     }, 0);
     // // 슬라이드 이동 시 현재 활성화된 pagination 변경
@@ -116,7 +116,7 @@ function prevMove() {
       // 각 슬라이드 아이템의 left에 offset 적용
       slideItems.forEach((i) => {
         i.setAttribute("style", `transition: ${0}s; left: ${-offset}px`);
-        i.setAttribute("style", `transition: ${0.7}s; left: ${-offset}px`);
+        i.setAttribute("style", `transition: ${0.15}s; left: ${-offset}px`);
       });
     }, 0);
     // 슬라이드 이동 시 현재 활성화된 pagination 변경
@@ -153,6 +153,41 @@ for (let i = 0; i < maxSlide; i++) {
     paginationItems[currSlide - 1].classList.add("active");
   });
 }
+
+// 드래그(스와이프) 이벤트를 위한 변수 초기화
+let startPoint = 0;
+let endPoint = 0;
+
+// PC 클릭 이벤트 (드래그)
+slide.addEventListener("mousedown", (e) => {
+  startPoint = e.pageX; // 마우스 드래그 시작 위치 저장
+});
+
+slide.addEventListener("mouseup", (e) => {
+  endPoint = e.pageX; // 마우스 드래그 끝 위치 저장
+  if (startPoint < endPoint) {
+    // 마우스가 오른쪽으로 드래그 된 경우
+    prevMove();
+  } else if (startPoint > endPoint) {
+    // 마우스가 왼쪽으로 드래그 된 경우
+    nextMove();
+  }
+});
+
+// 모바일 터치 이벤트 (스와이프)
+slide.addEventListener("touchstart", (e) => {
+  startPoint = e.touches[0].pageX; // 터치가 시작되는 위치 저장
+});
+slide.addEventListener("touchend", (e) => {
+  endPoint = e.changedTouches[0].pageX; // 터치가 끝나는 위치 저장
+  if (startPoint < endPoint) {
+    // 오른쪽으로 스와이프 된 경우
+    prevMove();
+  } else if (startPoint > endPoint) {
+    // 왼쪽으로 스와이프 된 경우
+    nextMove();
+  }
+});
 
 // 기본적으로 슬라이드 루프 시작하기
 let loopInterval = setInterval(() => {

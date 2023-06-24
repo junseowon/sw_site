@@ -38,3 +38,26 @@
 .sw_menu > li:hover .sw_submenu {
     height: 250px;
 }
+
+@font-face {
+    font-family: 'MapoDacapo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoDacapoA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sw_profile {
+    font-family: "MapoDacapo", sans-serif;
+    left: 30%;
+    font-size: 38px;
+    text-align: center;
+}
+
+.sw_profile h1{
+    margin-top: 70px;
+    font-family: "MapoDacapo", sans-serif;
+}
+
+.sw_profile img{
+    margin: 0;
+}

@@ -7,6 +7,11 @@
     <link rel="stylesheet" type="text/css" href="./css/sw_footer.css">
     <link rel="stylesheet" type="text/css" href="./css/sw_contents.css">
 
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <title>소프트웨어 페이지 | Compiler 컴파일러</title>
 </head>
 <body id="sw_body" oncontextmenu="return false" ondragstart="return false" onkeydown="return false">
@@ -16,7 +21,7 @@
 
             <div id="main_logo" onclick="location.href='./html/sw_main_index.html';">
 
-                <img class="profile" src="./images/main_logo.png">
+                <img class="main_profile" src="./images/main_logo.png">
 
                 <div class="logo_title">
                     Compiler
@@ -38,8 +43,8 @@
                 <li>
                   <a href="#">SW활동</a>
                   <ul class="sw_submenu">
-                    <li><a href="./html/sw_Bizcool_window.html">비즈쿨</a></li>
-                    <li><a href="./html/sw_bridge_window.html">징검다리 진로체험</a></li>
+                    <li><a href="./html/sw_android_window.html">Android 앱 제작</a></li>
+                    <li><a href="./html/sw_unity_window.html">Unity 게임 제작</a></li>
                   </ul>
                 </li>
                 <li>
@@ -53,7 +58,7 @@
                 <li>
                   <a href="#">SW교실</a>
                   <ul class="sw_submenu">
-                    <li><a href="#">SW팀은 여기 있어요!</a></li>
+                    <li><a href="https://map.naver.com/v5/entry/place/12121619?c=17.24,0,0,0,dh&p=T_VJhVj-306HxSf5EHQ1BQ,-62.63,-6.04,80,Float" target='_blank'>SW팀은 여기 있어요!</a></li>
                   </ul>
                 </li>
               </ul>
@@ -62,17 +67,52 @@
 
         <div id="sw_contents">
 
-            <div name="sw_main_banner">
-                <div class="sw_slide sw_slide_wrap">
-                    <div class="sw_slide_item sw_item"><video src="./images/sw_banner.mp4" type="video/mp4" autoplay muted></video></div>
-                    <div class="sw_slide_item sw_item"><img src="./images/sw_activity1.png"></div>
-                    <div class="sw_slide_item sw_item"><img src="./images/sw_activity2.png"></div>
-                    <div class="sw_slide_prev_button sw_slide_button">◀</div>
-                    <div class="sw_slide_next_button sw_slide_button">▶</div>
-                    <ul class="sw_slide_pagination"></ul>
-                </div>
-                
-            </div>
+          <div id="sw_main_banner">
+              <div class="sw_slide sw_slide_wrap">
+                  <div class="sw_slide_item sw_item sw_start_item"><video src="./images/sw_banner.mp4" type="video/mp4" autoplay muted></video></div>
+                  <div class="sw_slide_item sw_item"><img src="./images/sw_activity1.png"></div>
+                  <div class="sw_slide_item sw_item"><img src="./images/sw_activity2.png"></div>
+                  <div class="sw_slide_prev_button sw_slide_button">◀</div>
+                  <div class="sw_slide_next_button sw_slide_button">▶</div>
+                  <ul class="sw_slide_pagination"></ul>
+              </div>
+          </div>
+
+          <div class="sw_profile">
+
+            <h1>소프트웨어는 이런 분이 이끌어요!</h1>
+
+          </div>
+          
+          <div class="sw_profile">
+            <img src="./images/sw_profile_1.png">
+
+            <p>
+              이름 : 장은성<br>
+              부서 : 소프트웨어 부서<br>
+              직급 : 팀장<br>
+            </p>
+
+            <h4>
+              동아리 가치관<br>
+              -버그 따위에 절대 지지 않는 소프트웨어 전사들-
+            </h4>
+
+            <img src="./images/sw_profile_2.png" style="width: 400px; height: 350px;">
+
+            <p>
+              이름 : 원준서<br>
+              부서 : 소프트웨어 부서<br>
+              직급 : 부팀장<br>
+            </p>
+
+            <h4>
+              동아리 가치관<br>
+              -젊을 때 키보드 한 번 더 눌러라-
+            </h4>
+
+          </div>
+
         </div>
 
         <div id="sw_footer">
@@ -98,5 +138,6 @@
     </div>
     
     <script type="text/javascript" src="./javaScript/sw_slide.js"></script>
+    <script src="../javaScript/sw_scroll_fade_in.js"></script>
 </body>
 </html>
