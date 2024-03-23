@@ -1,0 +1,25 @@
+.sw_introduction_head {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 70px;
+}
+
+
+.sw_introduction_mid {
+    display: flex;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    width: 100%;
+    height: 430px;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.sw_scroll_down_fade_right {
+    display: flex;
+}
+
+.sw_scroll_down_fade_left{
+    display: flex;
+}

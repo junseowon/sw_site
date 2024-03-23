@@ -1,0 +1,42 @@
+#sw_body {
+    background-color: #fff;
+    margin: 0;
+    position: relative;
+    overflow-y:scroll;
+    overflow-x: hidden;
+}
+
+#sw_header {
+    position: sticky;
+    z-index: 10;
+    top: 0px;
+    height: 90px;
+    background-color: #6997cc;
+}
+
+#sw_nav {
+    position: static;
+    background-color: #6997cc;
+}
+
+#sw_contents {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#sw_contents .none{
+    text-align: center;
+    color: #000;
+    text-decoration-line: none;
+    font-size: 80px;
+    margin-top: 25%;
+    margin-bottom: 25%;
+    
+}
+
+#sw_footer {
+    height: 200px;
+    background-color: #28292b;
+    bottom: 0;
+    width: 100%;
+}

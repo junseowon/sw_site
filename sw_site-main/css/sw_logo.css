@@ -1,0 +1,48 @@
+
+#main_logo {
+    position: relative;
+	display: inline-block;
+}
+
+.main_profile {
+    height: 70px;
+    position: relative;
+	display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 10px;
+    transition: all ease 1s;
+    object-fit: cover;
+}
+
+.logo_title {
+    display: inline;
+    position: absolute;
+    font-size: 45px;
+    color: white;
+    margin-top: 10px;
+    padding-left: 9px;
+}
+
+@keyframes bounce {
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-10px)
+    }
+}
+
+#main_logo:hover {
+    cursor: pointer;
+}
+
+#main_logo:hover .profile {
+    transform: rotate(360deg);
+    cursor: pointer;
+}
+
+#main_logo:hover .logo_title {
+    animation: bounce 1s infinite;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+}
